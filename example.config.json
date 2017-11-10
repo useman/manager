@@ -1,0 +1,15 @@
+{
+  "env":"prod",
+  "mysql": {
+    "host": "localhost",
+    "port": 3306,
+    "username": "homestead",
+    "password": "",
+    "database": "new_csgo"
+  },
+  "queues": {
+    "timeouts": {
+      "SearchSuitableBotQueue": 1000
+    }
+  }
+}

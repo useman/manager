@@ -1,0 +1,23 @@
+{
+  "name": "manager.casedrop.com",
+  "version": "0.0.1",
+  "description": "Manager for casedrop.com",
+  "author": "Revi <useman@bk.ru>",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "ts-node": "3.3.0",
+    "@types/node": "^8.0.29",
+    "typescript": "2.5.2"
+   },
+  "dependencies": {
+    "typeorm": "0.1.2",
+    "reflect-metadata": "^0.1.10",
+    "mysql": "^2.14.1"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts",
+    "compile": "ts-node src/index.ts",
+  }
+}
