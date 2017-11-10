@@ -11,7 +11,7 @@ import {Notification} from "../entity/Notification";
  * Max difference last activity to check online bot
  * @type {number}
  */
-const MAX_DIFFERENCE_TIMESTAMP: number = 3000000; // (seconds)
+const MAX_DIFFERENCE_TIMESTAMP: number = 3; // (seconds)
 
 const MULTIPLIER_PRIZE_PRICE: number = 1.2;
 const SLEEP_NOT_ENOUGH_MONEY: number = 15000;
