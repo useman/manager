@@ -16,8 +16,8 @@
     "mysql": "^2.14.1"
   },
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "nodejs build/index.js",
     "dev": "ts-node src/index.ts",
-    "compile": "ts-node src/index.ts",
+    "compile": "tsc -p ."
   }
 }
