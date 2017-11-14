@@ -13,7 +13,7 @@ import {Notification} from "../entity/Notification";
  */
 const MAX_DIFFERENCE_TIMESTAMP: number = 3; // (seconds)
 
-const MULTIPLIER_PRIZE_PRICE: number = 1.2;
+const MULTIPLIER_PRIZE_PRICE: number = 1.01;
 const SLEEP_NOT_ENOUGH_MONEY: number = 15000;
 
 export class SearchSuitableBotQueue extends Queue {
