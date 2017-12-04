@@ -41,4 +41,14 @@ export class Notification extends BaseEntity {
         notification.updated_at = new Date;
         await notification.save();
     }
+
+    static async newAllBotsIsOffline() {
+        let notification = new Notification();
+        notification.type = NotificationType.ALL_BOTS_IS_OFFLINE;
+        notification.text = "All bots is offline";
+        notification.data = {};
+        notification.created_at = new Date;
+        notification.updated_at = new Date;
+        await notification.save();
+    }
 }

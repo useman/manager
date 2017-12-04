@@ -11,10 +11,11 @@ import {Notification} from "../entity/Notification";
  * Max difference last activity to check online bot
  * @type {number}
  */
-const MAX_DIFFERENCE_TIMESTAMP: number = 3; // (seconds)
+const MAX_DIFFERENCE_TIMESTAMP: number = 15; // (seconds)
 
 const MULTIPLIER_PRIZE_PRICE: number = 1.01;
 const SLEEP_NOT_ENOUGH_MONEY: number = 15000;
+const SLEEP_ALL_BOTS_IS_OFFLINE: number = 15000;
 
 export class SearchSuitableBotQueue extends Queue {
 
@@ -52,7 +53,11 @@ export class SearchSuitableBotQueue extends Queue {
 
         if (bots.length == 0) {
             console.warn("Error not found online bots");
-            step();
+            console.log("Sleep " + SLEEP_ALL_BOTS_IS_OFFLINE + " seconds");
+            await Notification.newAllBotsIsOffline();
+            setTimeout(() => {
+                step();
+            }, SLEEP_ALL_BOTS_IS_OFFLINE);
             return;
         }
 
