@@ -20,4 +20,13 @@ let pmx: any = require('pmx');
         ports         : true  // Shows which ports your app is listening on (default: false)
     });
 
+    process.on('unhandledRejection', function(err, promise) {
+        console.error('Unhandled rejection (promise: ', promise, ', reason: ', err, ').');
+        pmx.notify(err);
+        setTimeout(() => {
+            console.log('Exit');
+            process.exit(1);
+        }, 3000);
+    });
+
 })();
